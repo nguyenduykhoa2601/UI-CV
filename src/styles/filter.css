@@ -4,6 +4,7 @@
     margin-top: 30px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    height: auto;
     min-height: 500px;
     transition: 1s;
     position: relative;
@@ -13,6 +14,7 @@
     display: flex;
     justify-content: space-between;
     padding: 16px 16px;
+    z-index: 10;
 }
 
 .filter__state-upload input[type="file"] {
@@ -61,6 +63,7 @@
 }
 .filter__handle-image{
     display: flex;
+    z-index: 100;
 }
 
 .filter__handle-list{
@@ -81,10 +84,10 @@
 }
 .filter__handle-item:hover{
     cursor: pointer;
-    background-color: rgb(191,191,197);
+    background-color: rgb(231, 231, 250);
 }
 .filter__handle-item--active{
-    background-color: rgb(191,191,197);
+    border-style: dashed;
 }
 
 
@@ -105,7 +108,7 @@
     margin-left: 20px;
     font-size: 1.3rem;
     align-items: center;
-    
+    position: relative;
     background-color: transparent;
     padding: 4px 10px;
     border-radius: 10px;
@@ -121,24 +124,14 @@
 }
 .filter__image-handling{
     text-align: center;
-    margin-top: 40px;
-   
-    border-radius: 10px;
+    margin-top: 60px;
     position: relative;
-}
-
-.filter__image-handling img{
-    width: 100%;
-    height: 100%;
- 
     border-radius: 10px;
-    border: 1px solid black;
+    min-height: 400px;
+    align-items: center;
+    width: 100%;
 }
 
-.ReactCrop:first-child{
-    border-radius: 10px ;
-    
-}
 
 .input__range{
     z-index: 4;
@@ -149,11 +142,70 @@
     text-align: center;
     overflow: hidden;
     width: 100%;
-    z-index: -1 !important;
     margin-right: 40px;
+}
 
+.filter__image-current{
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.filter__rotate-control{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    flex-direction: column;
+    font-size: 1.4rem;
+}
+.filter__rotate-control input{
+    min-width: 200px;
+}
+
+.filter__rotate-button{
+    margin: auto;
+    display: flex;
+    padding: 5px 15px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.4rem;
+}
+
+.filter__rotate-button:hover{
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 
+.filter__shape-lists{
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 100%;
+    text-align: left;
+    z-index: 4;
+    background-color: #fff;
+    width: 100px;
+    transition: 0.5s;
+}
 
+.filter__rotate-item:last-child:hover .filter__shape-lists{
+    display: block;
+}
+
+.filter__shape-item{
+    align-items: center;
+    display: flex;
+    padding: 3px 5px
+ 
+}
+
+.filter__shape-item:hover{
+    background-color: #ccc;
+}
 

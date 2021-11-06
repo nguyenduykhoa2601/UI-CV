@@ -29,3 +29,6 @@ html{
 @import url('./filter.css');
 @import url('./loading');
 @import url('./modal.css');
+@import url('./brightness.css');
+@import url('./filterimg.css');
+@import url('./detection.css');

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Imagecropdialog = () => {
+const NotFound = () => {
     return (
         <div>
-            
+            NOTFOUND
         </div>
     );
 }
 
-export default Imagecropdialog;
+export default NotFound;

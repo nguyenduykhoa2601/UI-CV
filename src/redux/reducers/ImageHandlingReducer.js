@@ -1,6 +1,4 @@
-
-
-const ImageHandlingReducer = (state = {},action) => {
+const ImageHandlingReducer = (state = '',action) => {
     switch(action.type){
         case 'SET_IMAGE_HANDLING':{
             return action.payload
