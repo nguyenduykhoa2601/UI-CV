@@ -5,7 +5,6 @@ import AOS from 'aos'
 import "aos/dist/aos.css"
 const Detection = () => {
     const [previewImageUrl, setPreviewImageUrl] = useState(false);
-    const [imageHeight, setImageHeight] = useState(500);
     const [imageFile, setImageFile] = useState(null);
     const [imagePrediction, setImagePrediction] = useState("");
     const [loading, setLoading] = useState(false)

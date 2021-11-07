@@ -19,9 +19,11 @@ const Filter = ({ isDark }) => {
     const [isBright, setIsBright] = useState(false)
     const [isFilter, setIsFilter] = useState(false)
     const [imgSrc, setImgSrc] = useState(testImg)
+
     useEffect(() => {
         if (handlingImage) setImgSrc(handlingImage)
     }, [handlingImage])
+
     const setOpenCrop = () => {
         setIsCrop(true)
         setIsBright(false)
@@ -62,6 +64,7 @@ const Filter = ({ isDark }) => {
 
         else return <Cropimage imgSrc={imgSrc} />
     }
+    
     return (
         <div className="filter" style={styleDarkmode}>
             <div className="filter__state">
